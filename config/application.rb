@@ -32,7 +32,7 @@ module PineappleGift
     # Configure CORS
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3001'
+        origins 'http://localhost:3001', 'https://www.pineapple-gift-ui.vercel.app', 'https://pineapple-gift-ui.vercel.app'
         resource '*',
           headers: :any,
           methods: [:get, :post, :put, :patch, :delete, :options, :head]
